@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { images, products, offers } from "@/lib/data";
 import { ProductGrid } from "@/components/ProductCard";
 import { seo } from "@/lib/seo";
+import bakeryVideo from "@/assets/bakerz-bite-bakery.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => seo("Home", "Bakerz Bite — freshly baked cakes, pastries, cookies and pies in Karachi."),
@@ -30,6 +31,25 @@ function Index() {
             <Link to="/offers" className="rounded-full border border-primary-foreground px-7 py-3 font-semibold transition hover:bg-primary-foreground hover:text-primary">See Offers</Link>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pt-14">
+        <div className="mb-5">
+          <p className="font-semibold text-accent-foreground">Made fresh with love</p>
+          <h2 className="mt-2 text-4xl font-semibold">A little sweetness in motion</h2>
+        </div>
+        <video
+          className="aspect-video w-full rounded-2xl bg-primary object-cover shadow-warm"
+          controls
+          muted
+          playsInline
+          preload="metadata"
+          poster={images.hero}
+          aria-label="A baker preparing freshly baked cupcakes"
+        >
+          <source src={bakeryVideo.url} type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16">
