@@ -35,8 +35,8 @@ function Gallery() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-overlay p-4" onClick={() => setOpen(null)}>
           <button aria-label="Close" className="absolute right-6 top-6 rounded-full bg-card p-2"><X /></button>
           <figure className="animate-fade-up max-w-4xl">
-            <img src={pics[open].src} alt={pics[open].label} className="max-h-[80vh] rounded-2xl" />
-            <figcaption className="mt-3 text-center font-display text-xl text-primary-foreground">{pics[open].label}</figcaption>
+            <img src={pics[open]!.src} alt={pics[open]!.label} className="max-h-[80vh] rounded-2xl" />
+            <figcaption className="mt-3 text-center font-display text-xl text-primary-foreground">{pics[open]!.label}</figcaption>
           </figure>
         </div>
       )}

@@ -53,8 +53,8 @@ function Index() {
         <div className="grid items-center gap-8 rounded-3xl bg-secondary p-8 md:grid-cols-2">
           <div>
             <p className="font-semibold text-accent-foreground">Today's deal</p>
-            <h2 className="mt-2 text-4xl font-semibold">{offers[0].title} — {offers[0].discount}</h2>
-            <p className="mt-3 text-muted-foreground">{offers[0].details}</p>
+            <h2 className="mt-2 text-4xl font-semibold">{offers[0]!.title} — {offers[0]!.discount}</h2>
+            <p className="mt-3 text-muted-foreground">{offers[0]!.details}</p>
             <Link to="/offers" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">All offers</Link>
           </div>
           <img src={images.merch} alt="Bakerz Bite merchandise" loading="lazy" width={816} height={816} className="aspect-video w-full rounded-2xl object-cover" />
